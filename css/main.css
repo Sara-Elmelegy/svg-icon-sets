@@ -3,7 +3,6 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   font-family: Overpass, sans-serif;
-  color: #fff;
   line-height: 1.5;
 }
 
@@ -11,78 +10,79 @@ html {
   box-sizing: inherit;
 }
 
-h2 {
-  font-size: 2rem;
-  text-align: center;
-  font-family: sans-serif;
-  color: #fff;
-  margin-top:2rem;
-  grid-area: header;
-
-}
-
-h3 {
-  margin: 0 0 1.5rem;
-  font-size: 1;
-  padding: inherit;}
-
 body {
   margin: 0;
 }
 
 section {
-  background-image: linear-gradient(to bottom, #ff9500, #ff5e3a);
   display: grid;
-  background-color:#ff9500 ;
   grid-template-areas: "intro" "column1" "column2" "column3";
-  gap: 6vimn;
-  padding: 6vimn;
+  gap: 6vmin;
+  padding: 6vmin;
+  background-color:#ff9500;
+  background-image: linear-gradient(to bottom, #ff9500, #ff5e3a);
   color: #fff;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2rem;
+  justify-self: center;
+  grid-area: intro;
 }
 
 div {
-  justify-items: center;
-  margin: 0;
-  padding: 0;
-  flex-flow: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-a {
-  display: flex;
-  align-items: center;
-  border: .2rem solid #fff;
- padding: 20px 30px;
-  color: #fff;
-  display: flex;
+h3 {
+  margin: 0 0 1.5rem;
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 0 0 auto;
 }
 
 .icon {
   position: relative;
   width: 8em;
   height: 8em;
-  margin: 0;
-  width: 100%;
-  fill: currentColor;
+  margin-bottom: 1.5rem;
 }
+
 .icon svg {
+  fill: currentColor;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+margin-top: 1.5rem;
+padding: 1rem;
+  border: .2rem solid rgba(255, 255, 255, .7);
   color: #fff;
+  font-size: 1.125rem;
+  text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #ff9500 ;
-
+  background-color: #fff;
+  color: #ff5e3a;
 }
 
-span {
-  align-items: center;
-}
-@media only screen and (max-width: 38em) {
+@media only screen and (min-width: 38em) {
 
 section {
   grid-template-areas:
   "intro intro intro"
-  "column1" "column2" "column3";
+  "column1 column2 column3";
 }
-
 }
