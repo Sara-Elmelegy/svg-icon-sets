@@ -2,31 +2,41 @@ html {
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  font-family: "Overpass,sans serif";
+  font-family: Overpass, sans-serif;
   color: #fff;
-  line-height: 1.5rem;
+  line-height: 1.5;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
-h1 {
+h2 {
   font-size: 2rem;
   text-align: center;
   font-family: sans-serif;
   color: #fff;
-  margin-top:2;
+  margin-top:2rem;
+  grid-area: header;
 
+}
+
+h3 {
+  font-size: 1;
+padding: inherit;
 }
 
 body {
-  background-image: linear-gradient(180deg, #ff9500 , #ff5e3a );
+  margin: 0;
+}
+
+section {
+  background-image: linear-gradient(to bottom, #ff9500, #ff5e3a);
+  display: grid;
+  grid-template-areas: "header" "column1" "column2" "column3";
 }
 
 ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   margin: 0;
   padding: 0;
@@ -35,10 +45,11 @@ ul {
 
 a {
   display: flex;
-  flex-direction: wrap;
   align-items: center;
   border: .2rem solid #fff;
+ padding: 20px 30px;
   color: #fff;
+  display: flex;
 }
 
 .icon {
@@ -46,8 +57,25 @@ a {
   width: 8em;
   height: 8em;
   margin: 0;
+  width: 100%;
+  fill: currentColor;
+}
+.icon svg {
+  color: #fff;
 }
 
 span {
   align-items: center;
 }
+
+width: 100%;
+  fill: currentColor;
+
+.icon svg
+background-color: #ff9500;
+  background-image: linear-gradient(to bottom, #ff9500, #ff5e3a);
+  color: #fff;
+
+grid-area: intro;
+h2
+grid-area: header;
