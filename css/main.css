@@ -19,7 +19,7 @@ section {
   grid-template-areas: "intro" "column1" "column2" "column3";
   gap: 6vmin;
   padding: 6vmin;
-  background-color:#ff9500;
+  background-color: #ff9500;
   background-image: linear-gradient(to bottom, #ff9500, #ff5e3a);
   color: #fff;
 }
@@ -64,8 +64,8 @@ p {
 }
 
 a {
-margin-top: 1.5rem;
-padding: 1rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
   border: .2rem solid rgba(255, 255, 255, .7);
   color: #fff;
   font-size: 1.125rem;
@@ -80,9 +80,10 @@ a:focus {
 
 @media only screen and (min-width: 38em) {
 
-section {
-  grid-template-areas:
-  "intro intro intro"
-  "column1 column2 column3";
-}
+  section {
+    grid-template-areas:
+      "intro intro intro"
+      "column1 column2 column3";
+  }
+
 }
